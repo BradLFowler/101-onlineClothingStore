@@ -8,7 +8,22 @@
 </head>
 <body>
 
-    <h1>Hello World</h1>
+    <button onclick="sayHello()";>Click Me</button>
+    <button onclick="sayHi();">Click Me Too</button>
+    <input value="" onkeyup="setValue(this.value)"/>
+
+    <script>
+        function sayHello(){ alert('Hello!') };
+        function sayHi(){ console.log('Hi') };
+
+        let usersInput;
+
+        function setValue(input) {
+        usersInput = input
+        console.log({input}) 
+    }
+        
+      </script>
     
 </body>
 </html>
