@@ -8,11 +8,12 @@
 </head>
 <body>
     <!-- for a test -->
-    <button onclick="sayHello()";>Click Me</button>
+    <button onclick="sayHello();">Click Me</button>
     <button onclick="sayHi();">Click Me Too</button>
     <input value="" onkeyup="setValue(this.value)"/>
     <button onclick="openANewWindow();">Open</button>
     <button onclick="closeTheNewWindow();">Close</button>
+    <button onclick="createNewObject();">Create New Object</button>
 
 <script>
         
@@ -34,6 +35,16 @@
     function closeTheNewWindow() {
         secondWindow.close();
     }
+
+    function createNewObject() {
+        let newObject = document.createElement("H3")
+        let text = document.createTextNode("usersInput")
+        console.log("TESTING")
+
+        newObject.appendChild(text)
+        document.body.appendChild(newObject)
+    }
+
         
 </script>
     
