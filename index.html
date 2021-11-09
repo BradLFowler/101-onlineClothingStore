@@ -11,19 +11,31 @@
     <button onclick="sayHello()";>Click Me</button>
     <button onclick="sayHi();">Click Me Too</button>
     <input value="" onkeyup="setValue(this.value)"/>
+    <button onclick="openANewWindow();">Open</button>
+    <button onclick="closeTheNewWindow();">Close</button>
 
-    <script>
-        function sayHello(){ alert('Hello!') };
-        function sayHi(){ console.log('Hi') };
+<script>
+        
+    let secondWindow;
 
-        let usersInput;
+    function sayHello(){ alert('Hello!') };
+    function sayHi(){ console.log('Hi') };
+    function openANewWindow() {
+        secondWindow = window.open("", "myWindow", "width=400, height=300");
+    }
 
-        function setValue(input) {
+    let usersInput;
+
+    function setValue(input) {
         usersInput = input
         console.log({input}) 
     }
+
+    function closeTheNewWindow() {
+        secondWindow.close();
+    }
         
-      </script>
+</script>
     
 </body>
 </html>
